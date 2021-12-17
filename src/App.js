@@ -11,25 +11,29 @@ const App = () => {
 
   const [submitted, setSubmitted] = useState(true);
 
-  const handleFirstName = (event) => {
+  const handleFirstName = event => {
     setValues({...values, firstName: event.target.value});
   }
-  const handleLastName = (event) => {
+  const handleLastName = event => {
     setValues({...values, lastName: event.target.value});
   }
-  const handleEmail = (event) => {
+  const handleEmail = event => {
     setValues({...values, email: event.target.value});
   }
 
+  const handleSubmit = event => {
+    event.preventDefault();
+  }
+
   return (
-    <div class="form-container">
-      <form class="register-form">
+    <div className="form-container">
+      <form className="register-form" onSubmit={handleSubmit}>
         {submitted ? <div className='success-message'>Success! Thanks for your registering.</div> : null}
         <input
           onChange={handleFirstName}
           value={values.firstName}
           id="first-name"
-          class="form-field"
+          className="form-field"
           type="text"
           placeholder="First Name"
           name="firstName"
@@ -38,7 +42,7 @@ const App = () => {
           onChange={handleLastName}
           value={values.lastName}
           id="last-name"
-          class="form-field"
+          className="form-field"
           type="text"
           placeholder="Last Name"
           name="lastName"
@@ -47,12 +51,12 @@ const App = () => {
           onChange={handleEmail}
           value={values.email}
           id="email"
-          class="form-field"
+          className="form-field"
           type="text"
           placeholder="Email"
           name="email"
         />
-        <button class="form-field" type="submit">
+        <button className="form-field" type="submit">
           Register
         </button>
       </form>
