@@ -63,3 +63,7 @@ button {
 button:disabled {
   cursor: default;
 }
+
+.success-message {
+
+}

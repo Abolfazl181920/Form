@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div class="form-container">
       <form class="register-form">
-        <div className='succes-message'>Succes! Thanks for your registering.</div>
+        {submitted ? <div className='success-message'>Success! Thanks for your registering.</div> : null}
         <input
           onChange={handleFirstName}
           value={values.firstName}
