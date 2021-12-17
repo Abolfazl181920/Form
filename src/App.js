@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
 
 const App = () => {
+
+  const [values, setValues] = useState({
+    firstName: '',
+    lastName: '',
+    email: ''
+  });
+  
   return (
     <div class="form-container">
       <form class="register-form">
