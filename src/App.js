@@ -39,6 +39,8 @@ const App = () => {
           placeholder="First Name"
           name="firstName"
         />
+        <span>Please enter a firstName!</span>
+        
         <input
           onChange={handleLastName}
           value={values.lastName}
@@ -48,6 +50,8 @@ const App = () => {
           placeholder="Last Name"
           name="lastName"
         />
+        <span>Please enter a lastName!</span>
+
         <input
           onChange={handleEmail}
           value={values.email}
@@ -57,6 +61,8 @@ const App = () => {
           placeholder="Email"
           name="email"
         />
+        <span>Please enter an email address!</span>
+
         <button className="form-field" type="submit">
           Register
         </button>

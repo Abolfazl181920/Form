@@ -5,6 +5,7 @@
   --white: #fff;
   --inputwhite:#f2f2f2;
   --errormessage: #ffa4a4;
+  --error: rgb(197, 14, 14);
 }
 
 body {
@@ -56,6 +57,10 @@ input {
 .error {
   border-style: solid;
   border: 2px solid var(--errormessage);
+}
+
+span {
+  color: var(--error);
 }
 
 button {
