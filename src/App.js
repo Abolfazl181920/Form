@@ -13,6 +13,7 @@ const App = () => {
     <div class="form-container">
       <form class="register-form">
         <input
+          value={values.firstName}
           id="first-name"
           class="form-field"
           type="text"
@@ -20,6 +21,7 @@ const App = () => {
           name="firstName"
         />
         <input
+          value={values.lastName}
           id="last-name"
           class="form-field"
           type="text"
@@ -27,6 +29,7 @@ const App = () => {
           name="lastName"
         />
         <input
+          value={values.email}
           id="email"
           class="form-field"
           type="text"
