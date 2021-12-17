@@ -9,7 +9,7 @@ const App = () => {
     email: ''
   });
 
-  const [submitted, setSubmitted] = useState(true);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleFirstName = event => {
     setValues({...values, firstName: event.target.value});
@@ -19,6 +19,7 @@ const App = () => {
   }
   const handleEmail = event => {
     setValues({...values, email: event.target.value});
+    setSubmitted(true);
   }
 
   const handleSubmit = event => {
