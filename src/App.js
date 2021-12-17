@@ -1,25 +1,26 @@
-import React, {useState} from "react";
-import "./index.css";
+import React, {useState} from 'react';
+import './index.css';
 
 const App = () => {
 
-  const [values, setValues] = useState({
-    firstName: '',
-    lastName: '',
-    email: ''
-  });
-
-  const [submitted, setSubmitted] = useState(false);
+  const [values, setValues] = useState(
+    {
+      firstName: "",
+      lastName: "",
+      email: ""
+    }
+  );
   const [valid, setValid] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleFirstName = event => {
-    setValues({...values, firstName: event.target.value});
+  const handleFirstNameValue = event => {
+    setValues({...values, firstName:event.target.value});
   }
-  const handleLastName = event => {
-    setValues({...values, lastName: event.target.value});
+  const handleLastNameValue = event => {
+    setValues({...values, lastName:event.target.value});
   }
-  const handleEmail = event => {
-    setValues({...values, email: event.target.value});
+  const handleEmailValue = event => {
+    setValues({...values, email:event.target.value});
   }
 
   const handleSubmit = event => {
@@ -29,15 +30,15 @@ const App = () => {
     }
     setSubmitted(true);
   }
-
-  return (
+  
+  return(
     <div className="form-container">
       <form className="register-form" onSubmit={handleSubmit}>
 
-        {submitted && valid ? <div className='success-message'>Success! Thanks for your registering.</div> : null}
-
+        {submitted && valid ? <div className="success-message">Thanks for your regestering!</div> : null}
+        
         <input
-          onChange={handleFirstName}
+          onChange={handleFirstNameValue}
           value={values.firstName}
           id="first-name"
           className="form-field"
@@ -46,10 +47,10 @@ const App = () => {
           name="firstName"
         />
 
-        {submitted && !values.firstName ? <span>Please enter a firstName!</span> : null}
+        {submitted && !values.firstName ? <span>Please enter your firstName!</span> :null}
 
         <input
-          onChange={handleLastName}
+          onChange={handleLastNameValue}
           value={values.lastName}
           id="last-name"
           className="form-field"
@@ -58,10 +59,10 @@ const App = () => {
           name="lastName"
         />
 
-        {submitted && !values.lastName ? <span>Please enter a lastName!</span> : null}
-      
+        {submitted && !values.lastName ? <span>Please enter your lastName!</span> : null}
+
         <input
-          onChange={handleEmail}
+          onChange={handleEmailValue}
           value={values.email}
           id="email"
           className="form-field"
@@ -69,9 +70,9 @@ const App = () => {
           placeholder="Email"
           name="email"
         />
-        
-        {submitted && !values.email ? <span>Please enter an email address!</span> : null}
 
+        {submitted && !values.email ? <span>Please enter your email!</span> : null}
+        
         <button className="form-field" type="submit">
           Register
         </button>
