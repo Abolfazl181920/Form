@@ -22,6 +22,7 @@ const App = () => {
   return (
     <div class="form-container">
       <form class="register-form">
+        <div className='succes-message'>Succes! Thanks for your registering.</div>
         <input
           onChange={handleFirstName}
           value={values.firstName}
