@@ -19,11 +19,11 @@ const App = () => {
   }
   const handleEmail = event => {
     setValues({...values, email: event.target.value});
-    setSubmitted(true);
   }
 
   const handleSubmit = event => {
     event.preventDefault();
+    setSubmitted(true);
   }
 
   return (
