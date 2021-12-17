@@ -13,7 +13,7 @@ const App = () => {
     setValues({...values, firstName: event.target.value});
   }
   const handleLastName = (event) => {
-    setValues=({...values, lastName: event.target.value});
+    setValues({...values, lastName: event.target.value});
   }
   const handleEmail = (event) => {
     setValues({...values, email: event.target.value});
