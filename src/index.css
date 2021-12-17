@@ -1,15 +1,22 @@
+/* Root colors */
 :root {
   --green: #76b852;
+  --boldgreen:#538f33;
   --white: #fff;
+  --inputwhite:#f2f2f2;
+  --errormessage: #ffa4a4;
 }
+
 body {
   background: var(--green);
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+/* space of form */
 .form-container {
   width: 360px;
   background-color: var(--white);
@@ -18,6 +25,7 @@ body {
   padding: 10px;
 }
 
+/* body of form */
 .register-form {
   display: flex;
   flex-direction: column;
@@ -25,12 +33,14 @@ body {
   padding: 10px;
 }
 
+/* success message after regestering */
 .success-message {
   background-color: #3f89f8;
   padding: 15px;
   color: var(--white);
 }
 
+/* form fields : firstname,lastname,email */
 .form-field {
   margin: 10px 0 10px 0;
   padding: 15px;
@@ -38,31 +48,22 @@ body {
   border: 0;
 }
 
-span {
-  font-size: 14px;
-  color: red;
-  margin-bottom: 15px;
-}
-
 input {
-  background: #f2f2f2;
+  background: var(--inputwhite);
 }
 
+/* error message */
 .error {
   border-style: solid;
-  border: 2px solid #ffa4a4;
+  border: 2px solid var(--errormessage);
 }
 
 button {
-  background: var(--green);
+  background: var(--boldgreen);
   color: var(--white);
   cursor: pointer;
 }
 
 button:disabled {
   cursor: default;
-}
-
-.success-message {
-
 }
