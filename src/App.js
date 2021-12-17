@@ -32,7 +32,7 @@ const App = () => {
           name="firstName"
         />
         <input
-          onChange={handleFirstName}
+          onChange={handleLastName}
           value={values.lastName}
           id="last-name"
           class="form-field"
@@ -41,7 +41,7 @@ const App = () => {
           name="lastName"
         />
         <input
-          onChange={handleFirstName}
+          onChange={handleEmail}
           value={values.email}
           id="email"
           class="form-field"
