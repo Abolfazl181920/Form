@@ -9,10 +9,21 @@ const App = () => {
     email: ''
   });
 
+  const handleFirstName = (event) => {
+    setValues({...values, firstName: event.target.value});
+  }
+  const handleLastName = (event) => {
+    setValues=({...values, lastName: event.target.value});
+  }
+  const handleEmail = (event) => {
+    setValues({...values, email: event.target.value});
+  }
+
   return (
     <div class="form-container">
       <form class="register-form">
         <input
+          onChange={handleFirstName}
           value={values.firstName}
           id="first-name"
           class="form-field"
@@ -21,6 +32,7 @@ const App = () => {
           name="firstName"
         />
         <input
+          onChange={handleFirstName}
           value={values.lastName}
           id="last-name"
           class="form-field"
@@ -29,6 +41,7 @@ const App = () => {
           name="lastName"
         />
         <input
+          onChange={handleFirstName}
           value={values.email}
           id="email"
           class="form-field"
