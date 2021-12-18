@@ -3,13 +3,11 @@ import './index.css';
 
 const App = () => {
 
-  const [values, setValues] = useState(
-    {
-      firstName: "",
-      lastName: "",
-      email: ""
-    }
-  );
+  const [values, setValues] = useState({
+    firstName: '',
+    lastName: '',
+    email: ''
+  });
   const [valid, setValid] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -25,18 +23,18 @@ const App = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if (values.firstName && values.lastName && values.email) {
+    if (values.firstName && values.lastName && values.email && values.firstName.length > 4 && values.lastName.length > 4) {
       setValid(true);
     }
     setSubmitted(true);
   }
-  
+
   return(
     <div className="form-container">
       <form className="register-form" onSubmit={handleSubmit}>
 
-        {submitted && valid ? <div className="success-message">Thanks for your regestering!</div> : null}
-        
+        {submitted && valid ? <div className='success-message'>Thank's for your regestering...</div> : null}        
+
         <input
           onChange={handleFirstNameValue}
           value={values.firstName}
@@ -47,7 +45,7 @@ const App = () => {
           name="firstName"
         />
 
-        {submitted && !values.firstName ? <span>Please enter your firstName!</span> :null}
+        {submitted && !values.firstName ? <span>Please enter your First Name or enter more than 4 chars</span> : null}
 
         <input
           onChange={handleLastNameValue}
@@ -59,7 +57,7 @@ const App = () => {
           name="lastName"
         />
 
-        {submitted && !values.lastName ? <span>Please enter your lastName!</span> : null}
+        {submitted && !values.lastName ? <span>Please enter your Last Name or enter more than 4 chars</span> : null}
 
         <input
           onChange={handleEmailValue}
@@ -71,8 +69,8 @@ const App = () => {
           name="email"
         />
 
-        {submitted && !values.email ? <span>Please enter your email!</span> : null}
-        
+        {submitted && !values.email ? <span>Please enter your Email address</span> : null}
+
         <button className="form-field" type="submit">
           Register
         </button>
