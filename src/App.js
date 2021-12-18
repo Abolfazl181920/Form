@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import NightMode from './assets/night-mode.png';
 import './index.css';
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
 
   return(
     <div className="form-container">
+      <img src={NightMode} alt={`night mode`} />
       <form className="register-form" onSubmit={handleSubmit}>
 
         {submitted && valid ? <div className='success-message'>Thank's for your regestering...</div> : null}        
