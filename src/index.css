@@ -6,6 +6,8 @@
   --inputwhite:#d7ddd2;
   --errormessage: #ffa4a4;
   --error: rgb(197, 14, 14);
+  --darkmode: rgb(32, 31, 31);
+  --lightmode: rgb(240, 231, 231);
 }
 
 body {
