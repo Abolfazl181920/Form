@@ -36,7 +36,7 @@ const App = () => {
   }
 
   return(
-    <div className={mode ? 'dark' : 'light-form-container'}>
+    <div className={mode ? 'dark-form-container' : 'light-form-container'}>
       <img onClick={handleMode} src={NightMode} alt={`night mode`} />
       <form className="register-form" onSubmit={handleSubmit}>
 
