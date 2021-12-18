@@ -93,3 +93,8 @@ button {
 button:disabled {
   cursor: default;
 }
+
+/* dark-mode-img */
+.dark-mode-img {
+  width: 20%;
+}

@@ -37,7 +37,7 @@ const App = () => {
 
   return(
     <div className={mode ? 'dark-form-container' : 'light-form-container'}>
-      <img onClick={handleMode} src={NightMode} alt={`night mode`} />
+      <img className='dark-mode-img' onClick={handleMode} src={NightMode} alt={`night mode`} />
       <form className="register-form" onSubmit={handleSubmit}>
 
         {submitted && valid ? <div className='success-message'>Thank's for your regestering...</div> : null}        
