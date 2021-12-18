@@ -8,6 +8,7 @@
   --error: rgb(197, 14, 14);
   --darkmode: rgb(32, 31, 31);
   --lightmode: rgb(240, 231, 231);
+  --minidark: rgb(54, 50, 50);
 }
 
 body {
@@ -66,7 +67,7 @@ body {
   padding: 15px;
   font-size: 16px;
   border: 0;
-  background-color: var(--darkmode)
+  background-color: var(--minidark)
 }
 
 input {
