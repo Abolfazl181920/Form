@@ -11,6 +11,7 @@ const App = () => {
   });
   const [valid, setValid] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [mode, setMode] = useState(true);
 
   const handleFirstNameValue = event => {
     setValues({...values, firstName:event.target.value});
@@ -32,7 +33,7 @@ const App = () => {
 
   return(
     <div className="form-container">
-      <img src={NightMode} alt={`night mode`} />
+      <img onClick={} src={NightMode} alt={`night mode`} />
       <form className="register-form" onSubmit={handleSubmit}>
 
         {submitted && valid ? <div className='success-message'>Thank's for your regestering...</div> : null}        
