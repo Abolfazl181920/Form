@@ -46,7 +46,7 @@ const App = () => {
           onChange={handleFirstNameValue}
           value={values.firstName}
           id="first-name"
-          className="form-field"
+          className={mode ? 'dark-form-field' : 'light-form-field'}
           type="text"
           placeholder="First Name"
           name="firstName"
@@ -58,7 +58,7 @@ const App = () => {
           onChange={handleLastNameValue}
           value={values.lastName}
           id="last-name"
-          className="form-field"
+          className={mode ? 'dark-form-field' : 'light-form-field'}
           type="text"
           placeholder="Last Name"
           name="lastName"
@@ -70,7 +70,7 @@ const App = () => {
           onChange={handleEmailValue}
           value={values.email}
           id="email"
-          className="form-field"
+          className={mode ? 'dark-form-field' : 'light-form-field'}
           type="text"
           placeholder="Email"
           name="email"
