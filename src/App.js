@@ -78,7 +78,7 @@ const App = () => {
 
         {submitted && !values.email ? <span>Please enter your Email address</span> : null}
 
-        <button className="form-field" type="submit">
+        <button className={mode ? 'dark-form-field' : 'light-form-field'} type="submit">
           Register
         </button>
       </form>
